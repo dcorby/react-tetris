@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && sed -i 's\/bundle.js\/\\/bundle.js\/g' dist\/index.html"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,5 @@
     "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3"
-  },
-  "homepage": "/react-tetris/"
+  }
 }
