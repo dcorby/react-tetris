@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production && sed -i 's\/bundle.js\/\\/bundle.js\/g' dist\/index.html"
+    "build": "webpack --mode production && sed -i 's\/bundle.js\/\\/react-tetris\\/bundle.js\/g' dist\/index.html"
   },
   "keywords": [],
   "author": "",
