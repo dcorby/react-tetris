@@ -2,6 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import "./Board.scss";
 import Game from "./Game.js";
 import { BG_WIDTH, BG_HEIGHT, BOARD_WIDTH, BOARD_HEIGHT } from './Dimensions.js';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import RotateRightIcon from '@mui/icons-material/RotateRight';
 
 let GAME_STARTED = false;
 
@@ -56,27 +60,42 @@ class Board extends React.Component {
   render() {
     return (
       <div id="frame">
-      <div id="board" style={{ width: this.width, height: this.height }}>
-        <canvas width={this.width} height={this.height+this.cell} style={{marginTop: this.cell*-1}} ref={this.boardRef}></canvas>
-      </div>
-      <div id="info">
-        <div>
-          <div>
-            <p>SCORE</p>
-            <p id="score" ref={this.scoreRef}>0</p>
-          </div>
+        <div id="board" style={{ width: this.width, height: this.height }}>
+          <canvas width={this.width} height={this.height+this.cell} style={{marginTop: this.cell*-1}} ref={this.boardRef}></canvas>
         </div>
-        <div>
+        <div id="info">
+
           <div>
-            <p>LEVEL</p>
-            <p id="level" ref={this.levelRef}>1</p>
+            <div className="box">
+              <p>SCORE</p>
+              <p id="score" ref={this.scoreRef}>0</p>
+            </div>
+
+            <div className="box">
+              <p>LEVEL</p>
+              <p id="level" ref={this.levelRef}>1</p>
+            </div>
+
+            <div className="box">
+              <p>LINES</p>
+              <p id="lines" ref={this.linesRef}>0</p>
+            </div>
           </div>
-          <div style={{ marginTop: "10px" }}>
-            <p>LINES</p>
-            <p id="lines" ref={this.linesRef}>0</p>
+
+          <div className="box">
+            <div style={{ display:"flex" }}>
+              <ArrowLeftIcon className="svg25" />
+              <span style={{ marginRight:"auto" }}>o</span>
+              <span>p</span>
+              <ArrowRightIcon className="svg25" />
+            </div>
+        
+            <p>q</p>
+            <p><ArrowDropDownIcon className="svg25" /></p>
+            <p><RotateRightIcon className="svg15" /> = w</p>
           </div>
+
         </div>
-      </div>
       </div>
     )
   }
