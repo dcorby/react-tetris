@@ -15,11 +15,10 @@ div#board canvas {
 }
 
 div#info {
-  flex: 1;
+  flex: 0;
   display: flex;
   flex-direction: column;
   padding-left: 5%;
-  padding-right: 15%;
 }
 
 div#info > div {
@@ -33,10 +32,11 @@ div#info > div > div {
   background-color: #000000;
   border: 5px solid #00ffff;
   color: #FFFFFF;
-  font-size: 2.0em;
+  font-size: 26px;
   padding: 0.25em;
   font-family: courier;
   text-align: center;
+  min-width: 150px;
 }
 
 div#info > div > div > p {
