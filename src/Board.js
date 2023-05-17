@@ -76,8 +76,6 @@ class Board extends React.Component {
             <p id="lines" ref={this.linesRef}>0</p>
           </div>
         </div>
-        <div>
-        </div>
       </div>
       </div>
     )
