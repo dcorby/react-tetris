@@ -35,6 +35,9 @@ div#info div.box {
   font-family: courier;
   text-align: center;
   min-width: 150px;
+}
+
+div#info div.box:not(:first-child) {
   margin-top: 15px;
 }
 

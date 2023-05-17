@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production && sed -i 's\/bundle.js\/\\/react-tetris\\/bundle.js\/g' dist\/index.html"
+    "build": "webpack --mode production && sed -i 's/bundle.js/\\/react-tetris\\/bundle.js/g' dist/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
